@@ -6,8 +6,11 @@ body {
 }
 
 h1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
   transform: skew(-20deg);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #7FDFF2;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
 }
@@ -17,13 +20,15 @@ h1 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  background-image: url(/image/4884841.jpg);
+  background-image: url(/InvercionesHTweb/image/4884841.jpg);
   background-size: cover;
   background-position: center;
+  box-sizing: border-box;
 }
 
 header {
   width: 100%;
+  height: 10%;
   top: 0;
   position: fixed;
   display: flex;
@@ -34,10 +39,6 @@ header {
   background-color: #000;
 }
 
-h1{
-  font-size: 3rem;
-}
-
 .logo {
   position: relative;
   left: 5%;
@@ -45,7 +46,7 @@ h1{
   justify-content: center;
   align-items: center;
   width: 20%;
-  height: 10%;
+  height: 30%;
 }
 
 .logo>img {
@@ -132,7 +133,7 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 3.7em;
+  margin-top: 4.8em;
 }
 
 #banner-text {
@@ -141,6 +142,7 @@ main {
   margin: 0;
   padding: 0 1em;
   color: #7FDFF2;
+  margin-top: 2em;
 }
 
 #banner-text h2 {
@@ -171,7 +173,11 @@ article>h2 {
   color: #7FDFF2;
 }
 
-.product {
+.iconmenu {
+  width: 25px;
+}
+
+#product {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,10 +185,12 @@ article>h2 {
   width: 100%;
   border: 3px solid #2249cb;
   margin-top: 3em;
+  box-sizing: border-box;
 }
 
-.product>img {
+#product>img {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .product-info {
@@ -218,4 +226,59 @@ text-align: center;
   margin: 1.5rem;
   width: 30%;
   height: 20%;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 2em;
+}
+
+footer > h2 {
+  color: #7FDFF2;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+footer > form {
+display: flex;
+flex-direction: column;
+width: 70%;
+max-height: 500px;
+border: 2px solid #7FDFF2;
+border-radius: 10px;
+box-sizing: border-box;
+margin: 2em 0;
+}
+
+label{
+  color: #7FDFF2;
+  font-size: 1rem
+}
+
+input{
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+}
+
+#submit{
+  width: 40%;
+  height: 50px;
+  background-color: #893bd3;
+  color: #7FDFF2;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  margin: auto;
 }
