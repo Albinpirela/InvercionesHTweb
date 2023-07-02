@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
+  scroll-padding-top: 20em;
+  scroll-margin-top: 20em;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -11,12 +14,14 @@ h1 {
   display: flex;
   transform: skew(-20deg);
   font-size: 1.6rem;
-  color: #7FDFF2;
+  color: #2249cb;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
 }
 
 
 .container {
+  position: relative;
+  bottom: 8px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -36,7 +41,10 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #000;
-  background-color: #000;
+  background-image: url(/InvercionesHTweb/image/WhatsApp\ Image\ 2023-06-13\ at\ 3.48.13\ PM.jpeg);
+  background-size: cover;
+  z-index: 500;
+
 }
 
 .logo {
@@ -64,12 +72,12 @@ header {
 .menu-modal {
   width: 100%;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   transition: all 0.5s ease;
   margin: 0;
   z-index: 500;
@@ -99,31 +107,31 @@ header {
 }
 
 .menu-modal nav>ul {
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0;
   padding: 0;
 }
 
-.menu-modal nav ul>li {
-  width: 100%;
+.menu-modal nav ul > li {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 1em;
+  line-height: 2;
 }
 
 a {
   text-decoration: none;
-  color: #7FDFF2;
+  color: #2249cb;
   text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.5);
   font-size: 1.5rem;
+  /* margin-left: 2em; */
 }
 
 main {
@@ -133,8 +141,16 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 4.8em;
+  margin-top: 4em;
 }
+
+.banner {
+  display: flex;
+  width: 100%;
+  position: relative;
+  
+}
+
 
 #banner-text {
   font-size: 1rem;
@@ -142,7 +158,7 @@ main {
   margin: 0;
   padding: 0 1em;
   color: #7FDFF2;
-  margin-top: 2em;
+
 }
 
 #banner-text h2 {
@@ -175,6 +191,15 @@ article>h2 {
 
 .iconmenu {
   width: 25px;
+  position: relative;
+  top: 5px;
+}
+
+.producto {
+  width: 30px;
+  position: relative;
+  right: 4px;
+  top: 10px;
 }
 
 #product {
@@ -183,7 +208,6 @@ article>h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 3px solid #2249cb;
   margin-top: 3em;
   box-sizing: border-box;
 }
@@ -200,7 +224,7 @@ article>h2 {
   align-items: center;
   width: 100%;
   padding: 0;
-  color: #893bd3;
+  color: #2249cb;
 }
 
 .product-info>h3 {
@@ -282,3 +306,83 @@ textarea {
   border-radius: 15px;
   margin: auto;
 }
+
+@media (min-width: 500px) {
+  header {
+  justify-content: space-between; 
+  height: 5em; 
+  flex-direction: row;
+  }
+
+  h1 {
+    position: relative;
+    right: 15px;
+    font-size: 2em;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .active {
+    transform: translate(0, 60px);
+  }
+
+  .menu-modal {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 4em;
+    box-sizing: border-box;
+    padding: 0;
+    background-image: url(/InvercionesHTweb/image/WhatsApp\ Image\ 2023-06-13\ at\ 3.48.13\ PM.jpeg);
+    background-size: cover;
+    
+  }
+
+  .menu-modal nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-modal nav > ul {
+  position: relative;  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  }
+
+  .menu-modal nav ul > li {
+    margin: 0;
+    margin-left: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .menu-modal nav ul li > a {
+    color: #2249cb;
+  }
+
+  .menu-modal > img {
+    display: none;
+  }
+
+  #banner-text {
+    margin-top: 5em;
+    padding: 0 3em;
+  }
+
+
+}
+
