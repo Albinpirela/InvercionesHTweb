@@ -21,7 +21,6 @@ h1 {
 
 .container {
   position: relative;
-  bottom: 8px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
@@ -33,7 +32,7 @@ h1 {
 
 header {
   width: 100%;
-  height: 10%;
+  height: 6%;
   top: 0;
   position: fixed;
   display: flex;
@@ -155,7 +154,7 @@ main {
 #banner-text {
   font-size: 1rem;
   text-align: center;
-  margin: 0;
+  margin: 1em 0;
   padding: 0 1em;
   color: #7FDFF2;
 
@@ -181,7 +180,7 @@ article {
   padding: 0;
 }
 
-article>h2 {
+.title {
   font-size: 2rem;
   margin-top: 3em;
   padding: 0;
@@ -208,9 +207,29 @@ article>h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 400px;
   margin-top: 3em;
   box-sizing: border-box;
 }
+
+#product:hover {
+  animation-name: aniproduct;
+  animation-duration: 0.8s;
+  }
+  
+  @keyframes aniproduct {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 
 #product>img {
   width: 100%;
@@ -258,6 +277,7 @@ footer {
   align-items: center;
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
   margin-top: 2em;
 }
 
@@ -383,6 +403,87 @@ textarea {
     padding: 0 3em;
   }
 
-
 }
 
+@media (min-width: 900px) {
+  ::-webkit-scrollbar {
+    width: 15px;
+    opacity: 1;
+  }
+
+  ::-webkit-scrollbar-track {
+    opacity: 1;
+    background-color:rgba(34, 73, 203, 0.7)
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    opacity: 1;
+  }
+  
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10em;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    width: 20%;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 250%;
+    position: relative;
+    right: 45%;
+  }
+
+  .menu-modal {
+    position: absolute;
+    top: -12px;
+    width: 40%;
+    background-color: transparent;
+    background-image: none;
+    box-sizing: border-box;
+  }
+
+  .menu-modal nav ul > li {
+    width: 200px;
+  }
+
+  .menu-modal nav ul li > a {
+    font-size: 200%;
+  }
+
+  .iconmenu {
+    width: 20%;
+  }
+
+  #banner-text {
+    margin-top: 10em;
+    padding: 0 15em;
+  }
+
+  #contacto-menu {
+  position: relative;
+  top: 4px;
+  }
+
+  article {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}
